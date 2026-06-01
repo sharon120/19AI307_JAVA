@@ -19,81 +19,55 @@ To create  a Java program to perform the inheritance concept for employee detail
 -	c) Call `display()` to output employee details
 5.	End
 
-
 ## PROGRAM:
  ```
 /*
-Program to implement a Inheritance using Java
+Program to implement a variable and operators using Java
 Developed by: Sharon Harshini L M
-Registeration Number : 212223040193
+RegisterNumber: 212223040193
 */
 ```
 
 ## Sourcecode.java:
-```java
-import java.util.Scanner;
-
-// Base class
-class Employee {
-    String name;
-    int empID;
-
-    void setDetails(String name, int empID) {
-        this.name = name;
-        this.empID = empID;
-    }
-
-    void displayDetails() {
-        System.out.print("Name: " + name);
-        System.out.print("Emp_ID: " + empID);
-    }
-}
-
-// Derived class
-class Department extends Employee {
-    String departmentName;
-
-    void setDepartment(String departmentName) {
-        // If the input is "Software Developer", we abbreviate it to "Software"
-        if (departmentName.equalsIgnoreCase("Software Developer")) {
-            this.departmentName = "Software";
-        } else {
-            this.departmentName = departmentName;
-        }
-    }
-
-    void displayDepartmentDetails() {
-        // Call the base class method to display name and empID
-        displayDetails();
-        System.out.println("Department: " + departmentName);
-    }
-}
-
-// Main class
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Creating an object of the Department class
-        Department employee = new Department();
-
-        // Getting user input
-        String name = scanner.nextLine();
-        int empID = scanner.nextInt();
-        scanner.nextLine();  // Consume the newline l;
-        String department = scanner.nextLine();
-
-        // Setting and displaying employee and department details
-        employee.setDetails(name, empID);
-        employee.setDepartment(department);
-        employee.displayDepartmentDetails();
-    }
-}
 ```
+
+import java.util.Scanner;
+class Employee 
+{
+    int id;
+    String dept;
+    void getDetails()
+    {
+       Scanner sc=new Scanner(System.in);
+       id=sc.nextInt();
+       dept=sc.next();
+    }
+}
+class Manager extends Employee
+{
+    void display()
+    {
+        int salary=35000;
+        System.out.println("Emp_ID: "+id+" Department: "+dept+" Salary: "+salary);
+    }
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+       Manager obj = new Manager();
+       obj.getDetails();
+       obj.display();
+    }
+}
+
+```
+
+
+
 ## OUTPUT:
 
-![4B](image.png)
-
+<img width="518" alt="Image" src="https://github.com/user-attachments/assets/1911eabd-84ed-4cfd-a167-cf18253126c5" />
 
 ## RESULT:
 Thus the Java program to implement the inheritance concept for employee details was  executed successfully.
