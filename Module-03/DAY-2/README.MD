@@ -13,35 +13,42 @@ To develop a java program use append() method concatenates the given argument wi
 5.	Append a space and string `b` to `sb`
 6.	Print the concatenated result from `sb`
 7.	End
-
-
-
 ## PROGRAM:
  ```
 /*
-Program to implement a String Buffer using Java
+Program to implement a variable and operators using Java
 Developed by: Sharon Harshini L M
-Registeration Number : 212223040193
+RegisterNumber: 212223040193
 */
 ```
 
 ## Sourcecode.java:
-```java
+
+```
 import java.util.*;
-public class StringBufferExample3{  
-    public static void main(String args[]){ 
-        Scanner sc=new Scanner(System.in);
-        String str1=sc.nextLine();
-        StringBuffer sb=new StringBuffer(str1);  
-        sb.replace(7,11,"Java");  
-        System.out.println(sb); 
-}  
-}  
+	    
+		
+	public class Assignment6 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String a =sc.nextLine();
+		String b =sc.nextLine();
+		String output;
+
+		if (a.length() < b.length()) 
+			output = a + b + a;
+		else
+			output = b + a + b;
+		
+		System.out.println(output);
+	}
+
+}
 ```
 ## OUTPUT:
 
-![3b](image.png)
+<img width="396" alt="Image" src="https://github.com/user-attachments/assets/6d1b7a6e-8a82-4e5e-86cb-5b7d741f077a" />
 
 ## RESULT:
-
 Thus the java program use append() method concatenates the given argument with this String and use stringbuffer class was executed successfully.
